@@ -1,0 +1,13 @@
+{
+  "name": "unglish-frame",
+  "type": "module",
+  "version": "0.1.0",
+  "dependencies": {
+    "@netlify/blobs": "^6.4.2",
+    "dompurify": "^3.0.8",
+    "jsdom": "^24.0.0",
+    "satori": "^0.10.11",
+    "satori-html": "^0.3.2",
+    "sharp": "^0.32.6"
+  }
+}
