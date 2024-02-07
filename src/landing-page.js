@@ -54,9 +54,10 @@ export default async (frameContent) => {
             ${frameContent.buttons}
             ${frameContent.inputs}
 
-            <title>🔳 Unglish Frame</title>
+            <title>Unglish Demonstrator</title>
         </head>
         <body>
+            <h1>Unglish Demonstrator</h1>
             <figure>
                 <img width="600" src="${frameContent.image}" />
             </figure>

@@ -1,11 +1,11 @@
 const html = String.raw;
 export default {
     name: 'poster',
-    image: `/images/poster.png`,
+    image: `/images/poster-animated.gif`,
     buttons: [
         { 
             label: '🔳 Try Demo',
-            goTo: 'count',
+            goTo: 'start',
         },
         {
             label: '{😺} View on Github',

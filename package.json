@@ -1,10 +1,12 @@
 {
-  "name": "unglish-frame",
+  "name": "simplest-frame",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.8.1",
   "dependencies": {
     "@netlify/blobs": "^6.4.2",
+    "@unglish/word-generator": "^0.1.1",
     "dompurify": "^3.0.8",
+    "frames.js": "^0.1.1",
     "jsdom": "^24.0.0",
     "satori": "^0.10.11",
     "satori-html": "^0.3.2",

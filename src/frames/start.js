@@ -1,8 +1,13 @@
-import { generateWord } from '../data/word';
+import fonts from '../fonts';
+// Using require syntax
+const generate = require('@unglish/word-generator').default;
 
 const build = async (payload) => {
     const fontFile = fonts[0].file; // TODO: eventually we'll have more than one font
     const fontName = fonts[0].name;
+
+    console.log(generate);
+
     const html = String.raw;
     return html`
         <html>
@@ -30,12 +35,21 @@ const build = async (payload) => {
                     align-items: center;
                     justify-content: center;
                     line-height: 1;
-                    border: 2em solid #232323;
+                }
+                .written {
+                    font-size: 5rem;
+                    margin-bottom: 2rem;
+                }
+                .pronounced {
+                    font-size: 3rem;
                 }
             </style>
         </head>
         <body>
-            ${generateWord}
+            <fc-frame>
+                <div class="written">${generate().written.clean}</div>
+                <div class="pronounced">${generate().pronunciation}</div>
+            </fc-frame>
         </body>
     </html>
     `
@@ -54,10 +68,6 @@ export const buttons = [
         label: '/unglish',
         url: 'credits',
     },
-    { 
-        label: '🎬 View credits',
-        url: 'credits',
-    }
 ]
 
 export default {
