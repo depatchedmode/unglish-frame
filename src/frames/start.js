@@ -1,12 +1,12 @@
-import fonts from '../fonts';
-// Using require syntax
-const generate = require('@unglish/word-generator').default;
+import fonts from "../fonts";
+import unglish from "@unglish/word-generator";
 
 const build = async (payload) => {
     const fontFile = fonts[0].file; // TODO: eventually we'll have more than one font
     const fontName = fonts[0].name;
 
-    console.log(generate);
+    console.log(unglish);
+    const word = unglish.generateWord();
 
     const html = String.raw;
     return html`
@@ -47,8 +47,8 @@ const build = async (payload) => {
         </head>
         <body>
             <fc-frame>
-                <div class="written">${generate().written.clean}</div>
-                <div class="pronounced">${generate().pronunciation}</div>
+                <div class="written">${word.written.clean}</div>
+                <div class="pronounced">${word.pronunciation}</div>
             </fc-frame>
         </body>
     </html>
