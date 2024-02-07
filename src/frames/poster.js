@@ -4,12 +4,8 @@ export default {
     image: `/images/poster-animated.gif`,
     buttons: [
         { 
-            label: '🔳 Try Demo',
-            goTo: 'start',
-        },
-        {
-            label: '{😺} View on Github',
-            url: 'https://github.com/depatchedmode/simplest-frame'
+            label: '🎲 Generate a nonsense word',
+            goTo: 'word',
         }
     ]
 };

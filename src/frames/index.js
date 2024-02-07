@@ -1,9 +1,9 @@
 import poster from "./poster";
-import start from "./start";
+import word from "./word";
 import stolen from "./stolen";
 
 export default {
-    start,
+    word,
     poster,
     stolen,
 }
