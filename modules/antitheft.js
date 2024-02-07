@@ -65,9 +65,6 @@ const isFrameStolen = async (frameMessage) => {
     const isCastAllowed = boundCasts.includes(castHash) || boundCasts.length === 0;
     const isFirstParty = requestURL ? requestURL.indexOf(process.env.URL) > -1 : true;
 
-    console.log(boundAccounts, castAuthorID, boundAccounts.includes(castAuthorID) || boundAccounts.length === 0);
-    console.log(boundCasts, castHash, boundCasts.includes(castHash) || boundCasts.length === 0);
-
     return !isFirstParty || !isAuthorAllowed || !isCastAllowed;
 };
 
