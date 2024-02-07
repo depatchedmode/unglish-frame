@@ -2,6 +2,11 @@
   "name": "simplest-frame",
   "type": "module",
   "version": "0.8.1",
+  "scripts": {
+    "build": "cpx 'src/fonts/**/*.{ttf,otf,woff,woff2}' 'public/fonts' && cpx 'src/images/**/*.{jpg,png,gif,svg}' 'public/images'",
+    "dev": "netlify dev & nodemon",
+    "dev:live": "netlify dev --live & nodemon"
+  },
   "dependencies": {
     "@netlify/blobs": "^6.4.2",
     "@unglish/word-generator": "^0.1.8",
@@ -11,5 +16,9 @@
     "satori": "^0.10.11",
     "satori-html": "^0.3.2",
     "sharp": "^0.32.6"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "nodemon": "^3.0.3"
   }
 }
