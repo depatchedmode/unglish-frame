@@ -1,28 +1,17 @@
-import fonts from "../fonts";
 import unglish from "@unglish/word-generator";
 
 const build = async (payload) => {
-    const fontFile = fonts[0].file; // TODO: eventually we'll have more than one font
-    const fontName = fonts[0].name;
 
     const word = unglish.generateWord();
-    console.log(word);
 
     const html = String.raw;
     return html`
         <html>
         <head>
             <style>
-                @font-face {
-                    font-family: "${fontName}";
-                    src:
-                        local("${fontName}"),
-                        url("/fonts/${fontFile}") format("woff2");
-                }
                 body {
                     margin: 0;
                     padding: 0;
-                    font-family: "${fontName}";
                     background: #1A304A;
                 }
                 fc-frame {
@@ -36,20 +25,24 @@ const build = async (payload) => {
                     justify-content: center;
                     line-height: 1;
                 }
-                .written {
-                    padding-top: 2rem;
-                    font-size: 8rem;
-                    margin-bottom: 2rem;
-                }
-                .pronounced {
-                    font-size: 4rem;
-                }
             </style>
         </head>
         <body>
             <fc-frame>
-                <div class="written">${word.written.clean}</div>
-                <div class="pronounced">IPA: ${word.pronunciation}</div>
+                <div style="
+                    padding-top: 2rem;
+                    font-size: 8rem;
+                    margin-bottom: 2rem;
+                ">
+                    ${word.written.clean}
+                </div>
+                <div style="
+                    font-size: 4rem; 
+                    font-style: italic; 
+                    font-family: 'Vollkorn'
+                ">
+                    IPA: ${word.pronunciation}
+                </div>
             </fc-frame>
         </body>
     </html>

@@ -1,9 +1,7 @@
 import fonts from './fonts';
+import buildCSSFontStyles from '../modules/buildCSSFontStyles';
 
 export default async (frameContent) => {
-
-    const fontFile = fonts[0].file; // TODO: we'll have more than 1 font at some point
-    const fontName = fonts[0].name;
 
     const html = String.raw;
     const markup = html`
@@ -11,12 +9,7 @@ export default async (frameContent) => {
         <html>
         <head>
             <style>
-                @font-face {
-                    font-family: "${fontName}";
-                    src:
-                        local("${fontName}"),
-                        url("/fonts/${fontFile}") format("woff2");
-                }
+                ${buildCSSFontStyles(fonts)}
                 :root {
                     --background: white;
                     --text: black;
@@ -29,7 +22,7 @@ export default async (frameContent) => {
                 }
                 body {
                     padding: 2rem;
-                    font-family: "${fontName}";
+                    font-family: var(--vollkorn);
                     background: var(--background);
                     color: var(--text);
                     display: flex;
@@ -54,10 +47,10 @@ export default async (frameContent) => {
             ${frameContent.buttons}
             ${frameContent.inputs}
 
-            <title>Unglish Demonstrator</title>
+            <title>Unglish Word Generator</title>
         </head>
         <body>
-            <h1>Unglish Demonstrator</h1>
+            <h1>Unglish Word Generator</h1>
             <figure>
                 <img width="600" src="${frameContent.image}" />
             </figure>

@@ -3,16 +3,18 @@ import { loadFont } from '../../modules/utils';
 export default [
     {
         name: 'Vollkorn',
+        fileName: 'EBGaramond-Regular.ttf',
         data: await loadFont('EBGaramond-Regular.ttf'),
-        previewPath: '/fonts/Redaction-Regular.woff2',
+        format: 'ttf',
         weight: 400,
         style: 'normal',
     },
     {
-        name: 'Vollkorn-Italic',
+        name: 'Vollkorn',
+        fileName: 'EBGaramond-Italic.ttf',
         data: await loadFont('EBGaramond-Italic.ttf'),
-        previewPath: '/fonts/Redaction-Regular.woff2',
+        format: 'ttf',
         weight: 400,
         style: 'italic',
-    }
+    },
 ];
