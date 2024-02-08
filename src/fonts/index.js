@@ -17,4 +17,12 @@ export default [
         weight: 400,
         style: 'italic',
     },
+    {
+        name: 'Cousine',
+        fileName: 'Cousine-Italic.ttf.ttf',
+        data: await loadFont('Cousine-Italic.ttf'),
+        format: 'ttf',
+        weight: 400,
+        style: 'italic',
+    },
 ];

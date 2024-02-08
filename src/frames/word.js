@@ -30,16 +30,16 @@ const build = async (payload) => {
         <body>
             <fc-frame>
                 <div style="
-                    padding-top: 2rem;
+                    padding-top: 1rem;
                     font-size: 8rem;
                     margin-bottom: 2rem;
                 ">
                     ${word.written.clean}
                 </div>
                 <div style="
-                    font-size: 4rem; 
+                    font-size: 3rem; 
                     font-style: italic; 
-                    font-family: 'Vollkorn'
+                    font-family: 'Cousine'
                 ">
                     IPA: ${word.pronunciation}
                 </div>
