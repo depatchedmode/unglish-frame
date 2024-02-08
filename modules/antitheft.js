@@ -1,5 +1,4 @@
 import { getStore } from '@netlify/blobs';
-import frame from '../api/frame';
 
 // Utility functions to abstract the fetching and setting operations
 const fetchData = async (key) => {
